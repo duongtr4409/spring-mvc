@@ -8,5 +8,7 @@
 </head>
 <body>
 	<h1>Hello Spring-MVC</h1>
+	<h2>Menu</h2>
+	<%@include file="menu.jsp" %>
 </body>
 </html>

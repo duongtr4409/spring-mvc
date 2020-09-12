@@ -33,4 +33,8 @@
       <property name="suffix" value=".jsp" />
 
    </bean>
+   
+   <mvc:interceptors>
+   		<bean class="com.duongnv30.interceptor.MenuHandlerInterceptor"></bean>
+   </mvc:interceptors>
 </beans>
