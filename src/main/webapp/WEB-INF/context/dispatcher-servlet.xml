@@ -37,4 +37,6 @@
    <mvc:interceptors>
    		<bean class="com.duongnv30.interceptor.MenuHandlerInterceptor"></bean>
    </mvc:interceptors>
+   
+   <mvc:resources location="/templates/" mapping="/template/**"></mvc:resources>
 </beans>
