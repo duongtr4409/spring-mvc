@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators/">
+
+	<!-- Apply giao dien web -->
+	<decorator name="web" page="web.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+
+	<!-- Apply giao dien admin -->
+	<decorator name="admin" page="admin.jsp">
+		<pattern>/admin*</pattern>
+	</decorator>
+
+	<!-- khong apply giao dien -->
+	<excludes>
+		<pattern>/api*</pattern>
+	</excludes>
+
+</decorators>
+
