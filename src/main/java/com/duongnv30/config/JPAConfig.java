@@ -46,7 +46,8 @@ public class JPAConfig {
 	private Properties additionalProperties() {
 		Properties properties = new Properties();
 		properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
-		properties.setProperty("hibernate.hbm2dll.auto", "none");
+//		properties.setProperty("bibernate.hbm2ddl.auto", "create");
+//		properties.setProperty("hibernate.hbm2ddl.auto", "none");
 		return properties;
 	}
 

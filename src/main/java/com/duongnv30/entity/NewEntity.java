@@ -8,19 +8,19 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "new")
-public class NewEntity {
+@Table(name = "tbl_new")
+public class NewEntity extends BaseEntity{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "title", columnDefinition = "nvachar(255)", nullable = false)
+	@Column(name = "title", columnDefinition = "nvarchar(255)", nullable = false)
 	private String title;
 
 	@Column(name = "thumbnail", columnDefinition = "nvarchar(255)", nullable = false)
 	private String thumbnail;
 
-	@Column(name = "shortDescription", columnDefinition = "nvarchar(8889) DEFAULT('')", nullable = false)
+	@Column(name = "shortDescription", columnDefinition = "nvarchar(max) DEFAULT('')", nullable = false)
 	private String shortDescription;
 
 	@Column(name = "content", columnDefinition = "nvarchar(max)", nullable = false)
