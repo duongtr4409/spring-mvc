@@ -17,7 +17,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@EnableJpaRepositories(basePackages = {"com.duongnv30.repository"})
+@EnableJpaRepositories(basePackages = { "com.duongnv30.repository" })
 @EnableTransactionManagement
 public class JPAConfig {
 
@@ -38,16 +38,18 @@ public class JPAConfig {
 		jpaTransactionManager.setEntityManagerFactory(entityManagerFactory);
 		return jpaTransactionManager;
 	}
-	
+
 	public PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
 		return new PersistenceExceptionTranslationPostProcessor();
 	}
-	
+
 	private Properties additionalProperties() {
 		Properties properties = new Properties();
-		properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+//		properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
 //		properties.setProperty("bibernate.hbm2ddl.auto", "create");
-//		properties.setProperty("hibernate.hbm2ddl.auto", "none");
+		properties.setProperty("hibernate.hbm2ddl.auto", "none");
+
+		properties.setProperty("hibernate.enable_lazy_load_no_trans", "true");
 		return properties;
 	}
 

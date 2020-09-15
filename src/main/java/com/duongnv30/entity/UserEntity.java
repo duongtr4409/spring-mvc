@@ -74,4 +74,12 @@ public class UserEntity extends BaseEntity {
 		this.status = status;
 	}
 
+	public List<RoleEntity> getListRole() {
+		return listRole;
+	}
+
+	public void setListRole(List<RoleEntity> listRole) {
+		this.listRole = listRole;
+	}
+	
 }
