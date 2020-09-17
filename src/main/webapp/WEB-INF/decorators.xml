@@ -10,6 +10,11 @@
 	<decorator name="admin" page="admin.jsp">
 		<pattern>/admin*</pattern>
 	</decorator>
+	
+	<!-- Apply giao dien Login -->
+	<decorator name="login" page="login.jsp">
+		<pattern>/login</pattern>
+	</decorator>
 
 	<!-- khong apply giao dien -->
 	<excludes>

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@include file="/common/taglib.jsp" %>
+<%@page import="com.duongnv30.util.SecurityUtils" %>
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
 	<a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
@@ -58,6 +60,15 @@
 		</a>
 			<div class="dropdown-menu dropdown-menu-right"
 				aria-labelledby="userDropdown">
+				
+				<security:authorize access="isAnonymous()">
+					<a class="dropdown-item" href="#">You Must SignIn</a>
+				</security:authorize>
+				
+				<security:authorize access="isAuthenticated()">
+					<a class="dropdown-item" href="#">Hello <%= SecurityUtils.getPrincipal().getFullName() %></a>
+				</security:authorize>
+				
 				<a class="dropdown-item" href="#">Settings</a> <a
 					class="dropdown-item" href="#">Activity Log</a>
 				<div class="dropdown-divider"></div>

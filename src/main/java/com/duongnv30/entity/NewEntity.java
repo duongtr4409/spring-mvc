@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "new")
-public class NewEntity {
+@Table(name = "tbl_new")
+public class NewEntity extends BaseEntity{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +21,7 @@ public class NewEntity {
 	@Column(name = "thumbnail", columnDefinition = "nvarchar(255)")
 	private String thumbnail;
 
-	@Column(name = "shortdescription", columnDefinition = "nvarchar(max) default('d')", nullable = false)
+	@Column(name = "shortdescription", columnDefinition = "nvarchar(max) default('')", nullable = false)
 	private String shortDescription;
 
 	@Column(name = "content", columnDefinition = "nvarchar(max)", nullable = false)
